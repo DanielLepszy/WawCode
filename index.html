@@ -9,13 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <script src="js/main.js" ></script>
+    <script src="js/renderEmployee.js"></script>
+    <script src="js/data.js"></script>
 </head>
 
 <body class="dogs-app">
     <h1 class="main-title">
         <img src="Images/employee.png" alt='Logo'>
     </h1>
-    <table class="fixed-table" id="dogsContainer">
+    <table class="fixed-table" id="dogsContainer" onclick="renderEmployee()">
         <thead class="fixed-table_head">
             <tr>
                 <th>
