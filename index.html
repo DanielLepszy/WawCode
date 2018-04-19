@@ -8,9 +8,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
 </head>
-<body>
+
+<body class="dogs-app">
+    <h1 class="main-title">
+        <img src="Images/employee.png" alt='Logo'>
+    </h1>
+    <table class="fixed-table" id="dogsContainer">
+        <thead class="fixed-table_head">
+            <tr>
+                <th>
+                    Id
+                    <div valign="bottom">
+                        <button class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+                <th>
+                    First name
+                    <div valign="bottom">
+                        <button class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+                <th>
+                    Last name
+                    <div valign="bottom">
+                        <button class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+                <th>
+                    Date of birth
+                    <div valign="bottom">
+                        <button valign="bottom" class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+                <th>
+                    Company
+                    <div valign="bottom">
+                        <button valign="bottom" class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+                <th>
+                    Note
+                    <div valign="bottom">
+                        <button valign="bottom" class="btn btn-outline-light">&#x25B2</button>
+                        <button class="btn btn-outline-light">&#x25BC</button>
+                    </div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody class="fixed-table_body">
+
+        </tbody>
+        <tfoot>
+            <tr>
+
+                <td colspan='100%' style="text-align: center; padding:3px;">
+                    <button type="button" class="btn btn-outline-light">Add employee</button>
+                </td>
+
+            </tr>
+        </tfoot>
+    </table>
 </body>
 
 </html>
