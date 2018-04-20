@@ -9,9 +9,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <script src="js/main.js" ></script>
-    <script src="js/renderEmployee.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/renderEmployee.js"></script>
+    <script src="js/employeesSorting.js"></script>
 </head>
 
 <body class="dogs-app">
@@ -24,8 +25,8 @@
                 <th>
                     Id
                     <div valign="bottom">
-                        <button class="btn btn-outline-light">&#x25B2</button>
-                        <button class="btn btn-outline-light">&#x25BC</button>
+                        <button class="btn btn-outline-light" onclick="sortDescending()">&#x25B2</button>
+                        <button class="btn btn-outline-light" onclick="sortAscedning()">&#x25BC</button>
                     </div>
                 </th>
                 <th>
@@ -73,12 +74,13 @@
             <tr>
 
                 <td colspan='100%' style="text-align: center; padding:3px;">
-                    <button type="button" class="btn btn-outline-light">Add employee</button>
+                    <button type="button" class="btn btn-outline-light">Add employees</button>
                 </td>
 
             </tr>
         </tfoot>
     </table>
+
 </body>
 
 </html>

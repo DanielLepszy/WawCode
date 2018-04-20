@@ -1,15 +1,4 @@
-// const employeeLisss = require('/data.json')
-// console.log(employeeLisss);
-    const employeeList = [
-        {
-        "id": 1,
-        "firstName": "Jan",
-        "lastName": "Kowalski",
-        "dateOfBirth": "1.7.1990 11:35",
-        "company": "XSolve",
-        "note": 90
-      },
-]
+
 const renderEmployee = () => {
     renderHtml(
         document.getElementsByClassName('fixed-table_body')[0],
@@ -27,3 +16,12 @@ const renderEmployee = () => {
     );
 }
 const renderHtml = (parentElement, html) => parentElement.innerHTML = html;
+
+const setState = (list) =>{
+    employeeList = list;
+    return employeeList;
+}
+const getEmployeeList = (employeeList) =>{
+    return employeeList;
+}
+
