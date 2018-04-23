@@ -19,7 +19,7 @@
     <h1 class="main-title">
         <img src="Images/employee.png" alt='Logo'>
     </h1>
-    <table class="fixed-table" id="dogsContainer" >
+    <table class="fixed-table" id="dogsContainer">
         <thead class="fixed-table_head">
             <tr>
                 <th>
@@ -60,6 +60,27 @@
                 <th class="informationCells">
                     Note
                 </th>
+
+            </tr>
+            <tr class="additionalEmployee">
+                <th>
+                    <input type="text" onclick="setValueOfID()" readonly="readonly"></input>
+                </th>
+                <th>
+                    <input type="text" ></input>
+                </th>
+                <th>
+                    <input type="text"></input>
+                </th>
+                <th>
+                    <input type="text"></input>
+                </th>
+                <th>
+                    <input type="text"></input>
+                </th>
+                <th>
+                    <input type="text"></input>
+                </th>
             </tr>
         </thead>
         <tbody class="fixed-table_body">
@@ -69,8 +90,8 @@
             <tr>
 
                 <td colspan='100%' style="text-align: center; padding:3px;">
-                    <button type="button" class="btn btn-outline-light" onclick="renderEmployee()" >Add list of  employees</button>
-                    <button type="button" class="btn btn-outline-light" onclick="renderEmployee()" >Add new employee to list</button>
+                    <button type="button" class="btn btn-outline-light" onclick="renderEmployee()">Add list of employees</button>
+                    <button type="button" class="btn btn-outline-light" onclick="onAddNewEployeeButtonClick()">Add new employee to list</button>
                 </td>
 
             </tr>
