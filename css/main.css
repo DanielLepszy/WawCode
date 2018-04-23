@@ -32,10 +32,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ffff', end
 }
 
 .fixed-table tr:nth-child(even) {
-    background-color:#FC0604;
+    background-color:rgb(221, 221, 221);
 }
 
 .fixed-table tr:nth-child(odd) {
-    background-color: #000000be;
-;
+    background-color: rgb(190, 147, 28);
+}
+.informationCells{
+    width:120px;
 }

@@ -8,10 +8,10 @@ const sortByNameDescending = (a, b) => b.firstName > a.firstName
 const filterWithName = a => a.firstName != undefined && a.firstName != null
 const filterWithoutName = a => a.firstName === undefined || a.firstName === null
 
-// const sortByDateDescending = (a, b) => a.dateOfBirth < b.dateOfBirth
-// const filterWithDate = a => a.dateOfBirth != undefined && a.dateOfBirth != null
-// const filterWithoutDate = a => a.dateOfBirth === undefined || a.dateOfBirth === null
-// const sortByDateAscending = (a, b) => a.dateOfBirth > b.dateOfBirth
+const sortByNameOfCompanyAscending = (a, b) => a.company > b.company
+const sortByNameOfCompanyDescending = (a, b) => b.company > a.company
+const filterWithNameOfCompany = a => a.company != undefined && a.company != null
+const filterWithoutNameOfCompany = a => a.company === undefined || a.company === null
 
 const employeeSorter = (sorter, filter, withoutFilter) => {
     let sortedEmployees = Object.values(getEmployeeList(employeeList));
@@ -20,6 +20,28 @@ const employeeSorter = (sorter, filter, withoutFilter) => {
     sortedEmployees = sortedEmployees.concat(employeeWithoutAge);
     renderEmployee(sortedEmployees);
     setState(sortedEmployees);
+}
+
+
+const sortDescending = () => {
+    employeeSorter(sortByAgeDescending, filterWithAge, filterWithoutAge)
+}
+const sortAscedning = () => {
+    employeeSorter(sortByAgeAscending, filterWithAge, filterWithoutAge)
+}
+
+const sortByFirstNameAlphabetically = () => {
+    employeeSorter(sortByNameAscending, filterWithName, filterWithoutName)
+}
+const sortByFirstNameNonAlphabetically = () => {
+    employeeSorter(sortByNameDescending, filterWithName, filterWithoutName)
+}
+
+const sortByFirstNameOfCompanyAlphabetically = () => {
+    employeeSorter(sortByNameOfCompanyAscending, filterWithNameOfCompany, filterWithoutNameOfCompany)
+}
+const sortByFirstNameOfCompanyNonAlphabetically = () => {
+    employeeSorter(sortByNameOfCompanyDescending, filterWithNameOfCompany, filterWithoutNameOfCompany)
 }
 
 const sortByDateAscending = () => {
@@ -50,6 +72,7 @@ const sortByDateDescending = () => {
         a.dateOfBirth = a.dateOfBirth.split('.').reverse().join('/');
         b.dateOfBirth = b.dateOfBirth.split('.').reverse().join('/');
         if (a.dateOfBirth > b.dateOfBirth) {
+
             a.dateOfBirth = a.dateOfBirth.split('/').reverse().join('.');
             b.dateOfBirth = b.dateOfBirth.split('/').reverse().join('.');
             return -1;
@@ -64,23 +87,3 @@ const sortByDateDescending = () => {
         }
     });
 }
-
-const sortDescending = () => {
-    employeeSorter(sortByAgeDescending, filterWithAge, filterWithoutAge)
-}
-const sortAscedning = () => {
-    employeeSorter(sortByAgeAscending, filterWithAge, filterWithoutAge)
-}
-
-const sortByFirstNameAlphabetically = () => {
-    employeeSorter(sortByNameAscending, filterWithName, filterWithoutName)
-}
-const sortByFirstNameNonAlphabetically = () => {
-    employeeSorter(sortByNameDescending, filterWithName, filterWithoutName)
-}
-// const sortDateDescending = () => {
-//     employeeSorter(sortByDateDescending, filterWithDate, filterWithoutDate)
-// }
-// const sortDateAscedning = () => {
-//     employeeSorter(sortByDateAscending, filterWithDate, filterWithoutDate)
-// }

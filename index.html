@@ -46,25 +46,20 @@
                 <th>
                     Date of birth
                     <div valign="bottom">
-                        <button valign="bottom" class="btn btn-outline-light" onclick="sortByDateAscending()" >&#x25B2</button>
-                        <button class="btn btn-outline-light" onclick ="sortByDateDescending()">&#x25BC</button>
+                        <button valign="bottom" class="btn btn-outline-light" onclick="sortByDateAscending()">&#x25B2</button>
+                        <button class="btn btn-outline-light" onclick="sortByDateDescending()">&#x25BC</button>
                     </div>
                 </th>
                 <th>
                     Company
                     <div valign="bottom">
-                        <button valign="bottom" class="btn btn-outline-light">&#x25B2</button>
-                        <button class="btn btn-outline-light">&#x25BC</button>
+                        <button valign="bottom" class="btn btn-outline-light" onclick="sortByFirstNameOfCompanyAlphabetically()">&#x25B2</button>
+                        <button class="btn btn-outline-light" onclick="sortByFirstNameOfCompanyNonAlphabetically()">&#x25BC</button>
                     </div>
                 </th>
-                <th>
+                <th class="informationCells">
                     Note
-                    <div valign="bottom">
-                        <button valign="bottom" class="btn btn-outline-light">&#x25B2</button>
-                        <button class="btn btn-outline-light">&#x25BC</button>
-                    </div>
                 </th>
-
             </tr>
         </thead>
         <tbody class="fixed-table_body">
