@@ -13,7 +13,7 @@ const renderEmployee = () => {
                 <td >${renderNameLabel(employee.note)}</td>                
             </tr>`, '')
     );
-    
+    getPaginationTable();
 }
 const renderHtml = (parentElement, html) => parentElement.innerHTML = html;
 
@@ -56,7 +56,7 @@ const onAddNewEployeeButtonClick = (event) => {
         currentEmployeeList.push(getEmployee());
         renderEmployee(currentEmployeeList);
         clearInputs();
-        getPaginationTable();
+       // getPaginationTable();
         return setState(currentEmployeeList);
        
     }

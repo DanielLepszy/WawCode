@@ -53,4 +53,5 @@
 }
 input {
     text-transform:capitalize;
+    border:1px solid black;
 }
