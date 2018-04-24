@@ -3,12 +3,16 @@ const getPaginationTable = () => {
         var totalRows = $('#employeesContainer').find('tbody tr:has(td)').length;
         var recordPerPage = 5;
         var totalPages = Math.ceil(totalRows / recordPerPage);
-        var $pages = $('<div id="pages"></div>');
-        // if (document.getElementsByTagName("span").length == 0) {
+        var $pages = $('<div class="pages"></div>');
+        // Adding span do show pagination na deleting additional pagination to have only one
         for (i = 0; i < totalPages; i++) {
-            $('<span>&nbsp;' + (i + 1) + '</span>').appendTo($pages);
+            $('<span>  ' + (i + 1) + '</span>').appendTo($pages);
         }
-    
+        if (document.getElementsByClassName("pages").length > 0) {
+            $(".pages").empty();
+        }
+
+        
         $pages.appendTo('#employeesContainer');
         $('.pageNumber').hover(function () {
             $(this).addClass('focus');
@@ -20,7 +24,7 @@ const getPaginationTable = () => {
         for (var i = 0; i <= recordPerPage - 1; i++) {
             $(tr[i]).show();
         }
-       
+
         $('span').click(function (event) {
             $('#employeesContainer').find('tbody tr:has(td)').hide();
             var nBegin = ($(this).text() - 1) * recordPerPage;
@@ -29,7 +33,7 @@ const getPaginationTable = () => {
                 $(tr[i]).show();
             }
         });
-    
-  
+
+
     });
 }
