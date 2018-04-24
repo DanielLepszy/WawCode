@@ -1,4 +1,4 @@
-.dogs-app {
+.employee-app {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7ffff+2,f2ffff+100 */
     background: rgb(247, 255, 255);
     /* Old browsers */
@@ -13,14 +13,13 @@
     padding: 20px;
 }
 
-.dogs-app {
+.employee-app {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-flow: column;
 }
 
-.main-title,
-.dog-image-container {
+.main-title {
     align-self: center;
     margin-bottom: 20px;
 }

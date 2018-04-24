@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
     />
 
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    
+
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/renderEmployee.js"></script>
@@ -21,11 +25,11 @@
     <script src="js/inputs.js"></script>
 </head>
 
-<body class="dogs-app">
+<body class="employee-app">
     <h1 class="main-title">
         <img src="Images/employee.png" alt='Logo'>
     </h1>
-    <table class="fixed-table" id="dogsContainer">
+    <table class="fixed-table" id="employeesContainer">
         <thead class="fixed-table_head">
             <tr>
                 <th>
@@ -93,19 +97,21 @@
         </thead>
         <tbody class="fixed-table_body">
 
-        </tbody>
+        </tbody >
         <tfoot>
             <tr>
 
                 <td colspan='100%' style="text-align: center; padding:3px;">
-                    <button type="button" class="btn btn-outline-light" onclick="renderEmployee()">Add list of employees</button>
-                    <button type="button" class="btn btn-outline-light" onclick="onAddNewEployeeButtonClick()">Add new employee to list</button>
+                    <button type="button" class="btn btn-outline-light" onclick="renderEmployee()">Add current list of employees</button>
+                    <button type="button" class="btn btn-outline-light" onclick="onAddNewEployeeButtonClick()">Add new employee to current list</button>
                 </td>
 
             </tr>
         </tfoot>
     </table>
-
+    <div class="col-md-12 text-center">
+            <ul class="pagination pagination-lg pager" id="myPager"></ul>
+        </div>
 
 
 </body>
