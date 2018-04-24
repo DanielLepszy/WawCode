@@ -45,8 +45,6 @@ const getEmployee = () => {
     return data;
 }
 
-
-
 const onAddNewEployeeButtonClick = (event) => {
     let currentEmployeeList = getEmployeeList(employeeList);
     if (getEmployee().firstName.length === 0 || getEmployee().lastName.length === 0 &&
@@ -56,11 +54,9 @@ const onAddNewEployeeButtonClick = (event) => {
         currentEmployeeList.push(getEmployee());
         renderEmployee(currentEmployeeList);
         clearInputs();
-       // getPaginationTable();
         return setState(currentEmployeeList);
        
-    }
-    
+    }  
 }
 const setValueOfID = () => {
 
