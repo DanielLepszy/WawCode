@@ -64,6 +64,8 @@ const sortByDateAscending = () => {
             return 0;
         }
     });
+    renderEmployee(sortedEmployees);
+    setState(sortedEmployees);
 }
 const sortByDateDescending = () => {
     let sortedEmployees = getEmployeeList(employeeList);
@@ -86,4 +88,6 @@ const sortByDateDescending = () => {
             return 0;
         }
     });
+    renderEmployee(sortedEmployees);
+    setState(sortedEmployees);
 }

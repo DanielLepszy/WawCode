@@ -13,6 +13,7 @@
     <script src="js/main.js"></script>
     <script src="js/renderEmployee.js"></script>
     <script src="js/employeesSorting.js"></script>
+    <script src="js/inputs.js"></script>
 </head>
 
 <body class="dogs-app">
@@ -46,8 +47,8 @@
                 <th>
                     Date of birth
                     <div valign="bottom">
-                        <button valign="bottom" class="btn btn-outline-light" onclick="sortByDateAscending()">&#x25B2</button>
-                        <button class="btn btn-outline-light" onclick="sortByDateDescending()">&#x25BC</button>
+                        <button valign="bottom" class="btn btn-outline-light" onclick="sortByDateDescending()">&#x25B2</button>
+                        <button class="btn btn-outline-light" onclick="sortByDateAscending()">&#x25BC</button>
                     </div>
                 </th>
                 <th>
@@ -62,15 +63,15 @@
                 </th>
 
             </tr>
-            <tr class="additionalEmployee">
+            <tr class="additionalEmployee" onclick="setValueOfID()">
                 <th>
-                    <input type="text" onclick="setValueOfID()" readonly="readonly"></input>
+                    <input type="text"  readonly="readonly"></input>
                 </th>
                 <th>
-                    <input type="text" ></input>
+                    <input type="text" onkeypress="return lettersOnly(event,this )" maxlength=15></input>
                 </th>
                 <th>
-                    <input type="text"></input>
+                    <input type="text" onkeypress="return lettersOnly(event,this )" maxlength=15></input>
                 </th>
                 <th>
                     <input type="text"></input>

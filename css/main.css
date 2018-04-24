@@ -52,3 +52,7 @@
     flex-flow: row;
     
 }
+input {
+    text-transform:capitalize;
+    
+}

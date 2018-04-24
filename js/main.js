@@ -24,14 +24,13 @@ const getEmployeeList = (employeeList) => {
     return employeeList;
 }
 const getEmployee = () => {
-    
+
     let currentEmployeeList = getEmployeeList(employeeList);
     const information = [];
     for (var i = 1; i <= 5; i++) {
 
         information[i] = document.getElementsByTagName("input")[i].value;
     }
-
 
     const data = {
         "id": (currentEmployeeList.length + 1),
@@ -54,11 +53,16 @@ const onAddNewEployeeButtonClick = (event) => {
 
         currentEmployeeList.push(getEmployee());
         renderEmployee(currentEmployeeList);
+        clearInputs();
         return setState(currentEmployeeList);
     }
 }
 const setValueOfID = () => {
 
     document.getElementsByTagName("input")[0].value = (employeeList.length + 1)
-
+}
+const clearInputs = () => {
+    for (var i = 0; i <= 5; i++) {
+        document.getElementsByTagName("input")[i].value = ""
+    }
 }
