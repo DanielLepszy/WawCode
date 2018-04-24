@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/renderEmployee.js"></script>
@@ -65,7 +70,7 @@
             </tr>
             <tr class="additionalEmployee" onclick="setValueOfID()">
                 <th>
-                    <input type="text"  readonly="readonly"></input>
+                    <input type="text" readonly="readonly"></input>
                 </th>
                 <th>
                     <input type="text" onkeypress="return lettersOnly(event,this )" maxlength=15></input>
@@ -74,10 +79,12 @@
                     <input type="text" onkeypress="return lettersOnly(event,this )" maxlength=15></input>
                 </th>
                 <th>
-                    <input type="text"></input>
+                    <input class="form-control" id="date" name="date" placeholder="MM.DD.YYY" type="text" readonly="readonly" style="cursor:pointer"
+                    />
+
                 </th>
                 <th>
-                    <input type="text"></input>
+                    <input type="text" maxlength=18></input>
                 </th>
                 <th>
                     <input type="text"></input>
@@ -98,6 +105,8 @@
             </tr>
         </tfoot>
     </table>
+
+
 
 </body>
 

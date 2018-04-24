@@ -48,9 +48,10 @@ const getEmployee = () => {
 
 const onAddNewEployeeButtonClick = (event) => {
     let currentEmployeeList = getEmployeeList(employeeList);
-    if (getEmployee().firstName.length === 0 && getEmployee().lastName.length === 0 &&
-        getEmployee().dateOfBirth.length === 0 && getEmployee().company.length === 0 && getEmployee().note.length === 0) {} else {
-
+    if (getEmployee().firstName.length === 0 || getEmployee().lastName.length === 0 &&
+        getEmployee().dateOfBirth.length === 0 && getEmployee().company.length === 0 && getEmployee().note.length === 0) {
+        alert('Please, complete information ! ')
+    } else {
         currentEmployeeList.push(getEmployee());
         renderEmployee(currentEmployeeList);
         clearInputs();
