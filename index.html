@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
     />
 
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    
-
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/renderEmployee.js"></script>
@@ -30,6 +26,7 @@
         <img src="Images/employee.png" alt='Logo'>
     </h1>
     <table class="fixed-table" id="employeesContainer">
+
         <thead class="fixed-table_head">
             <tr>
                 <th>
@@ -94,11 +91,6 @@
                     <input type="text"></input>
                 </th>
             </tr>
-        </thead>
-        <tbody class="fixed-table_body">
-
-        </tbody >
-        <tfoot>
             <tr>
 
                 <td colspan='100%' style="text-align: center; padding:3px;">
@@ -106,14 +98,20 @@
                     <button type="button" class="btn btn-outline-light" onclick="onAddNewEployeeButtonClick()">Add new employee to current list</button>
                 </td>
 
+        </thead>
+        <tbody class="fixed-table_body" id="myTable">
+
+        </tbody>
+        <tfoot>
+
             </tr>
         </tfoot>
     </table>
     <div class="col-md-12 text-center">
-            <ul class="pagination pagination-lg pager" id="myPager"></ul>
-        </div>
+        <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
 
-
+    <script src="js/paginationTable.js"></script>
 </body>
 
 </html>
